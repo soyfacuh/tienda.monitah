@@ -92,19 +92,70 @@
   .social-link i {
     font-size: 1rem;
   }
+
+#buy {
+  padding-top: 80px;
+  margin-top: -80px;
+}
   
-  .facebook-link {
-    background-color: #3b5998;
-    color: white;
-    padding: 5px 15px;
-    border-radius: 20px;
-    font-weight: 500;
-  }
-  
-  .facebook-link:hover {
-    background-color: #344e86;
-    transform: translateY(-2px);
-  }
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin: 5% 0; /* 👈 mucho más equilibrado */
+}
+
+/* BASE (NO le pongas background acá) */
+.cta-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px;
+  border-radius: 25px;
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  background-color: unset;
+}
+
+/* NOSOTROS */
+.nosotros-link {
+  background-color: #db6cdb !important;
+  translate: 0 50px;
+}
+
+.nosotros-link:hover {
+  background-color: rgb(208, 112, 247) !important;
+  transform: translateY(-2px);
+}
+
+/* FACEBOOK */
+.facebook-link {
+  background-color: #2d4373 !important;
+}
+.facebook-link:hover {
+  background-color: #3b5998 !important;
+  transform: translateY(-2px);
+}
+
+/* CATALOGO (EXCEL) */
+.catalogo-link {
+  background-color: #185c37 !important;
+}
+.catalogo-link:hover {
+  background-color: #217346 !important;
+  transform: translateY(-2px);
+}
+
+/* WHATSAPP */
+.whatsapp-link {
+  background-color: #1da851 !important;
+}
+.whatsapp-link:hover {
+  background-color: #25D366 !important;
+  transform: translateY(-2px);
+}
   
   /* Header */
   header {
@@ -817,76 +868,178 @@
   }
   
   /* Responsive */
-  @media (max-width: 768px) {
-    h1 {
-      font-size: 2.3rem;
-    }
-    
-    section h2 {
-      font-size: 1.8rem;
-    }
-    
-    .social-links {
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-    
-    .nav-links {
-      flex-direction: column;
-      align-items: center;
-      gap: 10px;
-    }
-    
-    .about-content {
-      flex-direction: column;
-    }
-    
-    .values-container {
-      flex-direction: column;
-    }
-    
-    .value-item {
-      width: 100%;
-    }
-    
-    .contact-info {
-      flex-direction: column;
-      align-items: center;
-    }
-    
-    .product-categories {
-      flex-direction: column;
-      align-items: center;
-    }
-    
-    .category {
-      width: 100%;
-    }
-    
-    .footer-content {
-      flex-direction: column;
-      gap: 30px;
-    }
-    
-    .featured-products {
-      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    }
+
+@media (max-width: 768px) {
+
+  /* ===== NAV ===== */
+
+  .main-nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
-  
-  @media (max-width: 480px) {
-    .top-bar {
-      display: none;
-    }
-    
-    .header-animation {
-      display: none;
-    }
-    
-    .testimonial-slider {
-      height: 250px;
-    }
-    
-    .featured-products {
-      grid-template-columns: 1fr;
-    }
+
+  /* ===== HAMBURGUESA ===== */
+
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    z-index: 3000;
   }
+
+  .hamburger span {
+    width: 26px;
+    height: 3px;
+    background: var(--color-text);
+    border-radius: 2px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+
+  .hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translateY(8px);
+  }
+
+  .hamburger.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translateY(-8px);
+  }
+
+  /* ===== MENÚ LATERAL (MEJORADO) ===== */
+
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 75%;
+    max-width: 300px;
+    height: 100vh;
+    background: #fff;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+
+    box-shadow: -10px 0 30px rgba(0,0,0,0.1);
+    z-index: 2500;
+  }
+
+  .nav-links.active {
+    transform: translateX(0);
+  }
+
+  .nav-links a {
+    font-size: 1.2rem;
+    font-weight: 500;
+  }
+
+  /* ===== OVERLAY (ARREGLADO BIEN) ===== */
+  /* ===== OVERLAY (ARREGLADO BIEN) ===== */
+  /* ===== OVERLAY (ARREGLADO BIEN) ===== */
+
+  .nav-overlay {
+    inset: 0;
+    background: rgba(0,0,0,0.4);
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    transition: opacity 0.3s ease;
+    z-index: 2000;
+  }
+
+  .nav-overlay.active {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+
+  /* ===== TIPOGRAFÍA ===== */
+
+  h1 {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  section h2 {
+    font-size: 1.6rem;
+    text-align: center;
+  }
+
+  /* ===== LAYOUT ===== */
+
+  .about-content,
+  .values-container,
+  .contact-info,
+  .product-categories,
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .value-item,
+  .category {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  /* ===== PRODUCTOS ===== */
+
+  .featured-products {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 15px;
+  }
+
+  /* ===== BOTONES ===== */
+
+  .button-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .cta-button {
+    width: 100%;
+    max-width: 280px;
+    justify-content: center;
+  }
+
+  .nosotros-link {
+    transform: none !important;
+  }
+}
+
+
+/* ===== MOBILE CHICO ===== */
+
+@media (max-width: 480px) {
+
+  .top-bar,
+  .header-animation {
+    display: none;
+  }
+
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  section h2 {
+    font-size: 1.3rem;
+  }
+
+  .featured-products {
+    grid-template-columns: 1fr;
+  }
+
+}

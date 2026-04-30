@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initTestimonialSlider();
     initContactForm();
     initBackToTop();
+    initMobileMenu();
   });
   
   // Animación al hacer scroll
@@ -268,21 +269,24 @@ document.addEventListener('DOMContentLoaded', function() {
   }
   
   // Función para efectos de navegación smooth scroll
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-      e.preventDefault();
-      
-      const targetId = this.getAttribute('href');
-      const targetElement = document.querySelector(targetId);
-      
-      if (targetElement) {
-        window.scrollTo({
-          top: targetElement.offsetTop - 70, // 70px de offset para la barra de navegación
-          behavior: 'smooth'
-        });
-      }
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+
+    const targetId = this.getAttribute('href');
+
+    // si no existe el destino, no bloquees
+    const targetElement = document.querySelector(targetId);
+    if (!targetElement) return;
+
+    e.preventDefault();
+
+    window.scrollTo({
+      top: targetElement.offsetTop - 70,
+      behavior: 'smooth'
     });
+
   });
+});
   
   // Animación para los enlaces de contacto
   const contactLinks = document.querySelectorAll('.contact-link');
@@ -333,3 +337,33 @@ document.addEventListener('DOMContentLoaded', function() {
       card.style.boxShadow = '';
     });
   });
+
+  function initMobileMenu() {
+  const hamburger = document.querySelector('.hamburger');
+  const navLinks = document.querySelector('.nav-links');
+  const overlay = document.querySelector('.nav-overlay');
+
+  if (!hamburger || !navLinks) return;
+
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    navLinks.classList.toggle('active');
+    overlay?.classList.toggle('active');
+  });
+
+  // cerrar al tocar un link
+  document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+      hamburger.classList.remove('active');
+      navLinks.classList.remove('active');
+      overlay?.classList.remove('active');
+    });
+  });
+
+  // cerrar tocando fondo
+  overlay?.addEventListener('click', () => {
+    hamburger.classList.remove('active');
+    navLinks.classList.remove('active');
+    overlay.classList.remove('active');
+  });
+}

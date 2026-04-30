@@ -22,7 +22,7 @@
     <meta property="og:title" content="Monitah | Amor y calidad para bebés y mamás" />
     <meta property="og:description" content="Descubrí artículos pensados con amor para vos y tu bebé. Ropa, accesorios, regalos únicos y envíos a todo el país. ¡Conocé Monitah!" />
     <meta property="og:image" content="https://monitah.shop/img/og-image.jpg" />
-    <meta property="og:url" content="https://monitah.shop/" />
+    <meta property="og:url" content="https://monitah.com/" />
     <meta property="og:type" content="website" />
   
     <!-- Twitter Cards -->
@@ -74,14 +74,22 @@
 
     <nav class="main-nav">
       <div class="container">
+
+      <div class="hamburger">
+       <span></span>
+       <span></span>
+       <span></span>
+      </div>
+
         <ul class="nav-links">
           <li><a href="#about">Nosotros</a></li>
           <li><a href="#products">Productos</a></li>
-          <li><a href="#featured">Destacados</a></li>
-          <li><a href="#contact">Contacto</a></li>
+          <li><a href="#buy">Comprar</a></li>
         </ul>
       </div>
     </nav>
+
+    <div class="nav-overlay"></div>
 
 <!-- Section #1 -->
 <!-- Section #1 -->
@@ -120,7 +128,14 @@
           </div>
         </div>
       </div>
+
+
+  <a href="https://linktr.ee/monitah" target="_blank" class="cta-button nosotros-link">
+    <i class="sobre-nosotros"></i> ¡Más de nosotros!
+  </a>
+
     </section>
+    
 
 <!-- Section #2 -->
 <!-- Section #2 -->    
@@ -137,11 +152,11 @@
             <p>Ropa, accesorios y juguetes para los más pequeños</p>
             <ul class="product-list">
               <li>Accesorios para bebés</li>
-              <li>Juguetes sensoriales y didácticos</li>
               <li>Artículos de higiene y baño infantil</li>
-              <li>Mordillos, sonajeros y más</li>
+              <li>Mordillos, sonajeros y estimulación</li>
+              <li>Pañales y cuidado diario</li>
             </ul>
-            <button class="view-more"><a class="view-more-2" target="_blank" href="https://www.facebook.com/marketplace/profile/100094342824906/">Ver más</a></button>
+            <button class="view-more"><a class="view-more-2" target="_blank" href="https://docs.google.com/spreadsheets/d/1C7bsnDUO_IwCulg-pjz3UmQILNj4yyFH/edit?usp=sharing&ouid=113857534459892932728&rtpof=true&sd=true">Ver más</a></button>
           </div>
           <div class="category" data-category="mamas">
             <div class="category-icon">👩</div>
@@ -151,30 +166,47 @@
               <li>Artículos para lactancia materna</li>
               <li>Cuidado personal para mamás</li>
               <li>Accesorios funcionales para el hogar</li>
-              <li>Organizadores prácticos y modernos</li>
+              <li>Productos de bienestar y recuperación</li>
             </ul>
-            <button class="view-more"><a class="view-more-2" target="_blank" href="https://www.facebook.com/marketplace/profile/100094342824906/">Ver más</a></button>
+            <button class="view-more"><a class="view-more-2" target="_blank" href="https://docs.google.com/spreadsheets/d/1C7bsnDUO_IwCulg-pjz3UmQILNj4yyFH/edit?usp=sharing&ouid=113857534459892932728&rtpof=true&sd=true">Ver más</a></button>
           </div>
           <div class="category" data-category="regalos">
-            <div class="category-icon">🎁</div>
-            <h3>Regalos</h3>
-            <p>Sets especiales para ocasiones únicas</p>
+            <div class="category-icon">👵</div>
+            <h3>Adultos</h3>
+            <p>Productos de higiene y cuidado personal para adultos</p>
             <ul class="product-list">
-              <li>Detalles listos para regalar</li>
-              <li>Kits pensados para baby showers</li>
-              <li>Opciones personalizadas con amor</li>
-              <li>Presentaciones que enamoran</li>
+              <li>Pañales para adultos</li>
+              <li>Productos de higiene personal</li>
+              <li>Cuidado y bienestar diario</li>
+              <li>Accesorios prácticos</li>
             </ul>
-            <button class="view-more"> <a class="view-more-2" target="_blank" href="https://www.facebook.com/marketplace/profile/100094342824906/">Ver más</a></button>
+            <button class="view-more"> <a class="view-more-2" target="_blank" href="https://docs.google.com/spreadsheets/d/1C7bsnDUO_IwCulg-pjz3UmQILNj4yyFH/edit?usp=sharing&ouid=113857534459892932728&rtpof=true&sd=true">Ver más</a></button>
           </div>
         </div>
       </div>
     </section>
 
+
+<div id="buy" class="button-container">
+  <a href="https://www.facebook.com/marketplace/profile/100094342824906/" target="_blank" class="cta-button facebook-link">
+    <i class="fab fa-facebook"></i> Ver productos en Facebook
+  </a>
+
+  <a href="https://docs.google.com/spreadsheets/d/1C7bsnDUO_IwCulg-pjz3UmQILNj4yyFH/edit?usp=sharing&ouid=102093750457595472894&rtpof=true&sd=true" target="_blank" class="cta-button catalogo-link">
+    <i class="fas fa-file-excel"></i> Ver catálogo entero
+  </a>
+
+  <a href="https://w.app/monitah" target="_blank" class="cta-button whatsapp-link">
+    <i class="fab fa-whatsapp"></i> Ver productos en WhatsApp
+  </a>
+</div>
+
 <!-- Section #3 -->
 <!-- Section #3 -->
 
-    <section class="featured" id="featured">
+
+
+<!--    <section class="featured" id="featured">
       <div class="container">
         <h2>Productos Destacados</h2>
         <p class="section-description">Estos son algunos de nuestros artículos más populares</p>
@@ -221,69 +253,92 @@
         </div>
       </div>
     </section>
+     -->
+
+
 
 <!-- Section #4 -->
 <!-- Section #4 -->    
 
-    <section class="testimonials">
-      <div class="container">
-        <h2>Lo que dicen nuestros clientes</h2>
-        <div class="testimonial-slider">
-          <div class="testimonial-slide active">
-            <div class="quote">"Los productos son de excelente calidad y la atención es impecable. ¡Súper recomendado!"</div>
-            <div class="author">Ana María L.</div>
-          </div>
-          <div class="testimonial-slide">
-            <div class="quote">"Mi bebé adora los juguetes que compré en Tienda Monitah. Volveré a comprar sin duda."</div>
-            <div class="author">Carmen R.</div>
-          </div>
-          <div class="testimonial-slide">
-            <div class="quote">"Los envíos son rápidos y los productos llegan en perfectas condiciones. Excelente servicio."</div>
-            <div class="author">Paula G.</div>
-          </div>
+<section class="testimonials">
+  <div class="container">
+    <h2>Lo que dicen nuestros clientes</h2>
+
+    <div class="testimonial-slider">
+      
+      <div class="testimonial-slide active">
+        <div class="quote">
+          "Los productos son de excelente calidad y la atención es impecable. ¡Súper recomendado!"
         </div>
-        <div class="testimonial-controls">
-          <button class="prev-testimonial"><i class="fas fa-chevron-left"></i></button>
-          <div class="testimonial-dots">
-            <span class="dot active" data-index="0"></span>
-            <span class="dot" data-index="1"></span>
-            <span class="dot" data-index="2"></span>
-          </div>
-          <button class="next-testimonial"><i class="fas fa-chevron-right"></i></button>
-        </div>
+        <div class="author">Ana María L.</div>
       </div>
-    </section>
 
-<!-- Section #5 -->
-<!-- Section #5 -->
-
-    <section class="contact" id="contact">
-      <div class="container">
-        <h2>Contacto</h2>
-        <p class="section-description">¿Tienes alguna pregunta? ¡Estamos para ayudarte!</p>
-        
-        <div class="contact-info">
-          <div class="contact-item">
-            <a href="https://wa.me/+541155748708" target="_blank" class="contact-link">
-              <div class="contact-icon"><i class="fab fa-whatsapp"></i></div>
-              <p>WhatsApp: 11-5574-8708</p>
-            </a>
-          </div>
-          <div class="contact-item">
-            <a href="https://www.instagram.com/tienda.monitah" target="_blank" class="contact-link">
-              <div class="contact-icon"><i class="fab fa-instagram"></i></div>
-              <p>Instagram: @tienda.monitah</p>
-            </a>
-          </div>
-          <div class="contact-item">
-            <a href="https://maps.google.com/?q=Lomas+del+Mirador" target="_blank" class="contact-link">
-              <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
-              <p>Ubicación: Lomas del Mirador</p>
-            </a>
-          </div>
+      <div class="testimonial-slide">
+        <div class="quote">
+          "Mi bebé adora los juguetes que compré en Tienda Monitah. Volveré a comprar sin duda."
         </div>
-        
-    </section>
+        <div class="author">Carmen R.</div>
+      </div>
+
+      <div class="testimonial-slide">
+        <div class="quote">
+          "Los envíos son rápidos y los productos llegan en perfectas condiciones. Excelente servicio."
+        </div>
+        <div class="author">Paula G.</div>
+      </div>
+
+      <div class="testimonial-slide">
+        <div class="quote">
+          "Muy buena experiencia, todo llegó antes de lo esperado y en perfecto estado."
+        </div>
+        <div class="author">Lucía M.</div>
+      </div>
+
+      <div class="testimonial-slide">
+        <div class="quote">
+          "Excelente atención al cliente, me ayudaron en todo momento. Recomiendo 100%."
+        </div>
+        <div class="author">Mariana S.</div>
+      </div>
+
+      <div class="testimonial-slide">
+        <div class="quote">
+          "Los precios son muy buenos y la calidad supera lo que esperaba."
+        </div>
+        <div class="author">Valeria P.</div>
+      </div>
+
+      <div class="testimonial-slide">
+        <div class="quote">
+          "Compré varias veces y siempre todo perfecto. Muy confiables."
+        </div>
+        <div class="author">Carla T.</div>
+      </div>
+
+    </div>
+
+    <div class="testimonial-controls">
+      <button class="prev-testimonial">
+        <i class="fas fa-chevron-left"></i>
+      </button>
+
+      <div class="testimonial-dots">
+        <span class="dot active" data-index="0"></span>
+        <span class="dot" data-index="1"></span>
+        <span class="dot" data-index="2"></span>
+        <span class="dot" data-index="3"></span>
+        <span class="dot" data-index="4"></span>
+        <span class="dot" data-index="5"></span>
+        <span class="dot" data-index="6"></span>
+      </div>
+
+      <button class="next-testimonial">
+        <i class="fas fa-chevron-right"></i>
+      </button>
+    </div>
+
+  </div>
+</section>
 
     <div class="back-to-top">
       <i class="fas fa-chevron-up"></i>
@@ -307,18 +362,20 @@
           </div>
           <div class="footer-contact">
             <h4>Contacto</h4>
-            <p><i class="fab fa-whatsapp"></i> +54 11-5574-8708</p>
+            <p><i class="fab fa-whatsapp"></i> +54 9 11 3215-9653</p>
             <p><i class="fab fa-instagram"></i> @tienda.monitah</p>
-            <p><i class="fas fa-map-marker-alt"></i> Lomas del Mirador</p>
+            <p><i class="fas fa-map-marker-alt"></i>Lomas del Mirador</p>
           </div>
         </div>
         <div class="footer-bottom">
-          <p>© 2024 Tienda Monitah - Todos los derechos reservados</p>
+          <p>© 2026 Tienda Monitah - Todos los derechos reservados</p>
           <p class="footer-note">Con ❤️ para mamás y bebés</p>
         </div>
       </div>
     </footer>
 
-    <script src="./js/main.js"></script>
+    <script src="./js/main.js" defer></script>
+
+    
   </body>
 </html>
